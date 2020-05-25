@@ -33,19 +33,10 @@
 
         (cond
             (
-                (= _seq 1)
+                (or (= _seq 1) (= _seq 0))
                 (setq retval 1)
             )
-        )
-    
-        (cond
-            (
-                (= _seq 0)
-                (setq retval 1)
-            )
-        )
 
-        (cond
             (
                 (> _seq 1)
                 (setq
@@ -66,7 +57,44 @@
     (let
         (
             (retval)
+            (_base base)
+            (_pow pow)
+            (i 0)
         )
+
+        (cond
+            (
+                (typep _base 'string)
+                (setq _base (parse-integer _base))
+            )
+        )
+
+        (cond
+            (
+                (typep _pow 'string)
+                (setq _pow (parse-integer _pow))
+            )
+        )
+        (setq retval _base)
+        (cond
+            (
+                (= _pow 0)
+                (setq retval 1)
+            )
+            (
+                (= _pow 1)
+                (setq retval _base)
+            )
+            (
+                t
+                (loop
+                    (setq retval (* retval _base))
+                    (setq i (+ i 1))
+                    (when (= i (- _pow 1)) (return retval))
+                )
+            )
+
+        )
+        retval
     )
 )
-
