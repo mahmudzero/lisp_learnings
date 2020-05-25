@@ -17,24 +17,39 @@
         <scope of local vars>
     )
 "
-(defun expon (base pow)
+(defun fib (seq)
     (let
         (
             (retval)
+            (_seq seq)
         )
         (cond
             (
-                (= (parse-integer pow) 1)
-                (setq retval (parse-integer base))
+                (= _seq 1)
+                (setq retval 1)
             )
         )
     
         (cond
             (
-                (= (parse-integer pow) 0)
+                (= _seq 0)
                 (setq retval 1)
             )
         )
+
+        (cond
+            (
+                (> _seq 1)
+                (setq
+                    retval
+                    (+
+                        (fib (- _seq 1))
+                        (fib (- _seq 2))
+                    )
+                )
+            )
+        )
+
         retval
     )
 )
