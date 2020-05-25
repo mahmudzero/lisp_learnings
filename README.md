@@ -1,20 +1,29 @@
 # LISP
 ## Common Lisp -- sbcl v2.0.4
-## installation
-### macos
+### installation
+#### macos
 `brew install sbcl`
+#
 
-## defining global var
+## learning the language
+
+<br/>
+
+### defining global var
 `(defvar <varname> <value; optional>)`
 
-## last line of func is returned value from func
+<br/>
+
+### last line of func is returned value from func
 ```
 (defun <funcname> (arglist..)
     <func body>
 )
 ```
 
-## defining local vars in function
+<br/>
+
+### defining local vars in function
 ```
 (let
     (
@@ -23,4 +32,3 @@
     <body: scope of local vars>
 )
 ```
-
