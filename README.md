@@ -1,4 +1,8 @@
 # LISP
+## Common Lisp -- sbcl v2.0.4
+## installation
+### macos
+`brew install sbcl`
 
 ## defining global var
 `(defvar <varname> <value; optional>)`
