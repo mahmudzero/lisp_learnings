@@ -4,5 +4,6 @@
 (defvar seq)
 (setq seq (ret_line))
 
-(print (fib (parse-integer seq)))
+"(print (fib (parse-integer seq)))"
+(print (fib seq))
 

@@ -23,6 +23,14 @@
             (retval)
             (_seq seq)
         )
+
+        (cond
+            (
+                (typep _seq 'string)
+                (setq _seq (parse-integer _seq))
+            )
+        )
+
         (cond
             (
                 (= _seq 1)
@@ -51,6 +59,14 @@
         )
 
         retval
+    )
+)
+
+(defun expon (base pow)
+    (let
+        (
+            (retval)
+        )
     )
 )
 
