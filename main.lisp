@@ -1,7 +1,11 @@
 #!/usr/local/bin/sbcl --script
 (load "./helpers.lisp")
 
-(defvar x)
-(setq x (ret_line))
-(print x)
+(defvar base)
+(setq base (ret_line))
+
+(defvar pow)
+(setq pow (ret_line))
+
+(print (expon base pow))
 
