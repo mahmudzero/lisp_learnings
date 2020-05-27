@@ -1,15 +1,7 @@
 #!/usr/local/bin/sbcl --script
+(load "~/.sbclrc")
 (load "./helpers.lisp")
-"
-(defvar seq)
-(setq seq (ret_line))
 
-(print (fib seq))
-"
+(ql:quickload :cl-opengl)
 
-(defvar base)
-(defvar powr)
-(setq base (ret_line))
-(setq powr (ret_line))
-
-(print (expon base powr))
+(gl:draw-arrays :triangles 0 3)
